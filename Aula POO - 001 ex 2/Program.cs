@@ -17,26 +17,19 @@ namespace Aula_POO___001_ex_2
     {
         static void Main(string[] args)
         {
-            string estado1;
-            string estado2;
-            string estado3;
-
-            double popu1;
-            double popu2;
-            double popu3;
-
+            // Declaração de variáveis para nomes de estados, populações, pessoas vacinadas e totais
+            string estado1, estado2, estado3;
+            double popu1, popu2, popu3;
             double poputotal;
-
-            double vacinados1;
-            double vacinados2;
-            double vacinados3;
-
+            double vacinados1, vacinados2, vacinados3;
             double vacinadostotal;
-
             double faltavacinar;
-            string con = "SIM";
+            string con = "SIM"; // Inicializa a variável de controle do loop
+
+            // Loop para permitir que o usuário digite 3 estados mais de uma vez
             do
             {
+                // Entrada de dados para o primeiro estado
                 Console.WriteLine("Digite o nome do primeiro estado:");
                 estado1 = Console.ReadLine();
                 Console.WriteLine("Digite a população do primeiro estado:");
@@ -44,6 +37,7 @@ namespace Aula_POO___001_ex_2
                 Console.WriteLine("Digite o número de pessoas vacinadas no primeiro estado:");
                 vacinados1 = double.Parse(Console.ReadLine());
 
+                // Entrada de dados para o segundo estado (e assim por diante)
                 Console.WriteLine("Digite o nome do segundo estado:");
                 estado2 = Console.ReadLine();
                 Console.WriteLine("Digite a população do segundo estado:");
@@ -58,16 +52,19 @@ namespace Aula_POO___001_ex_2
                 Console.WriteLine("Digite o número de pessoas vacinadas no terceiro estado:");
                 vacinados3 = double.Parse(Console.ReadLine());
 
+                // Cálculos de totais e faltavacinar
                 poputotal = popu1 + popu2 + popu3;
                 vacinadostotal = vacinados1 + vacinados2 + vacinados3;
-
                 faltavacinar = poputotal - vacinadostotal;
+
+                // Exibe a quantidade de pessoas que ainda falta vacinar
                 Console.WriteLine($"Falta Vacinar: {faltavacinar.ToString("0")}");
 
+                // Pergunta ao usuário se deseja continuar
                 Console.WriteLine("Digite SIM caso queira continuar");
                 con = Console.ReadLine();
 
-            } while (con == "SIM");
+            } while (con == "SIM"); // Condição para continuar o loop
         }
     }
 }

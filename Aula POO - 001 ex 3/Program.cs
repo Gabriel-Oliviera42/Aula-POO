@@ -14,18 +14,23 @@ namespace Aula_POO___001_ex_3
     {
         static void Main(string[] args)
         {
+            // Declaração de variáveis para pesos, alturas, IMCs e resultados de cada pessoa
             double peso1, peso2, peso3, peso4, peso5;
             double altura1, altura2, altura3, altura4, altura5;
             double imc1, imc2, imc3, imc4, imc5;
             string resultado1, resultado2, resultado3, resultado4, resultado5;
 
+            // Contadores para estatísticas de classificação de IMC
             double magreza = 0, normal = 0, sobrepeso = 0, ob1 = 0, ob2 = 0, ob3 = 0;
 
+            // Entrada de dados para a pessoa 1
             Console.WriteLine("Digite o peso 1:");
             peso1 = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a altura 1:");
             altura1 = double.Parse(Console.ReadLine());
             imc1 = peso1 / (altura1 * altura1);
+
+            // Classificação do IMC e atualização dos contadores
             if (imc1 < 18.5)
             {
                 resultado1 = "Magreza";
@@ -57,11 +62,13 @@ namespace Aula_POO___001_ex_3
                 ob3++;
             }
 
+            // Entrada de dados para a pessoa 2 (e assim por diante)
             Console.WriteLine("Digite o peso 2:");
             peso2 = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a altura 2:");
             altura2 = double.Parse(Console.ReadLine());
             imc2 = peso2 / (altura2 * altura2);
+
             if (imc2 < 18.5)
             {
                 resultado2 = "Magreza";
@@ -93,11 +100,13 @@ namespace Aula_POO___001_ex_3
                 ob3++;
             }
 
+            // Entrada de dados para a pessoa 3 (e assim por diante)
             Console.WriteLine("Digite o peso 3:");
             peso3 = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a altura 3:");
             altura3 = double.Parse(Console.ReadLine());
             imc3 = peso3 / (altura3 * altura3);
+
             if (imc3 < 18.5)
             {
                 resultado3 = "Magreza";
@@ -129,11 +138,13 @@ namespace Aula_POO___001_ex_3
                 ob3++;
             }
 
+            // Entrada de dados para a pessoa 4 (e assim por diante)
             Console.WriteLine("Digite o peso 4:");
             peso4 = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a altura 4:");
             altura4 = double.Parse(Console.ReadLine());
             imc4 = peso4 / (altura4 * altura4);
+
             if (imc4 < 18.5)
             {
                 resultado4 = "Magreza";
@@ -165,11 +176,13 @@ namespace Aula_POO___001_ex_3
                 ob3++;
             }
 
+            // Entrada de dados para a pessoa 5 (última pessoa)
             Console.WriteLine("Digite o peso 5:");
             peso5 = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a altura 5:");
             altura5 = double.Parse(Console.ReadLine());
             imc5 = peso5 / (altura5 * altura5);
+
             if (imc5 < 18.5)
             {
                 resultado5 = "Magreza";
@@ -201,6 +214,7 @@ namespace Aula_POO___001_ex_3
                 ob3++;
             }
 
+            // Exibe estatísticas finais
             Console.WriteLine($"Estatísticas:");
             Console.WriteLine($"Magreza: {magreza}");
             Console.WriteLine($"Normal: {normal}");
@@ -208,7 +222,8 @@ namespace Aula_POO___001_ex_3
             Console.WriteLine($"Obesidade grau I: {ob1}");
             Console.WriteLine($"Obesidade grau II: {ob2}");
             Console.WriteLine($"Obesidade grau III: {ob3}");
-            Console.ReadKey();
+            Console.ReadKey(); // Aguarda uma tecla ser pressionada antes de fechar
         }
     }
+}
 }
