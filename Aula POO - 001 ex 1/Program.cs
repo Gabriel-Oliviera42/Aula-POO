@@ -23,25 +23,27 @@ namespace Aula_POO___001_ex_1
     {
         static void Main(string[] args)
         {
+            // Declaração de variáveis
             string produto = null;
             double valor = 0;
             string pagamento = null;
             int op = 0;
             int alt;
 
+            // Loop principal
             while (op != 5)
             {
-                Console.Clear();
+                Console.Clear(); // Limpa a tela do console
                 Console.WriteLine("--------------------------------");
                 Console.WriteLine("1. Nome do Produto");
                 Console.WriteLine("2. Valor do Produto");
                 Console.WriteLine("3. Forma de Pagamento");
                 Console.WriteLine("4. Mostrar Dados da Compra");
-                Console.WriteLine("5. finalizar procedimento");
+                Console.WriteLine("5. Finalizar Procedimento");
                 Console.WriteLine("--------------------------------");
 
                 Console.WriteLine("Qual opção você quer?");
-                op = int.Parse(Console.ReadLine());
+                op = int.Parse(Console.ReadLine()); // Leitura da opção escolhida pelo usuário
 
                 switch (op)
                 {
@@ -61,6 +63,8 @@ namespace Aula_POO___001_ex_1
                         Console.WriteLine("3. Parcelado");
                         Console.WriteLine("--------------------------------");
                         alt = int.Parse(Console.ReadLine());
+
+                        // Switch dentro da opção 3 para a forma de pagamento
                         switch (alt)
                         {
                             case 1:
@@ -85,6 +89,8 @@ namespace Aula_POO___001_ex_1
                         }
                         break;
                     case 4:
+                        // Exibe os dados da compra
+                        // Fiz sem depender do usuario precisar colocar todas as informações, já que vai aparecer em branco nesse caso
                         Console.WriteLine("Nome do Produto: " + produto);
                         Console.WriteLine("Valor do Produto: " + valor);
                         Console.WriteLine("Forma de Pagamento: " + pagamento);
@@ -97,7 +103,7 @@ namespace Aula_POO___001_ex_1
                         break;
                 }
                 Console.WriteLine("Pressione Enter para continuar");
-                Console.ReadKey();
+                Console.ReadKey(); // Aguarda uma tecla ser pressionada antes de continuar o loop
             }
         }
     }
