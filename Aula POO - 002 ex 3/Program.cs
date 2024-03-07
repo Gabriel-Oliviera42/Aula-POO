@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/*
+Crie um programa em C# que utiliza funções com passagem de valor por
+referência para realizar as seguintes operações:
+a. Recebe dois números do usuário e troca os valores entre eles utilizando uma
+função.
+b. Recebe um vetor de inteiros e calcula a soma de seus elementos usando uma
+função.
+ */
 
 namespace Aula_POO___002_ex_3
 {
@@ -32,7 +40,22 @@ namespace Aula_POO___002_ex_3
 
             Console.WriteLine($"A soma dos elementos do vetor é: {soma}");
 
-            Console.ReadKey();
+            // Parte c - Cálculo da soma de elementos na diagonal de uma matriz
+
+            Console.WriteLine("Informe o número de linhas e colunas da matriz:");
+            int linhas = int.Parse(Console.ReadLine());
+            int colunas = linhas; // para fazer uma patriz quadrada
+
+            // Declaração e alocação da matriz
+            int[,] matriz = new int[linhas, colunas];
+            int res = 0;
+            PreencherMatriz(matriz);
+
+            res = Somardiagonal(matriz);
+
+            Console.WriteLine($"Média dos valores: {res}");
+
+            Console.ReadKey();      
         }
 
         // Função para trocar valores entre dois números
@@ -55,5 +78,37 @@ namespace Aula_POO___002_ex_3
 
             return soma;
         }
+
+        // Função para preencher a matriz com valores informados pelo usuário
+        static void PreencherMatriz(int[,] matriz)
+        {
+            Console.WriteLine("Informe os valores da matriz:");
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write($"Matriz[{i},{j}]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+        }
+
+        static int Somardiagonal(int[,] matriz)
+        {
+            int soma = 0;
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    if(i == j)
+                    {
+                        soma += matriz[i,j];
+                    }
+                }
+            }
+            return soma;
+        }
+
     }
 }
