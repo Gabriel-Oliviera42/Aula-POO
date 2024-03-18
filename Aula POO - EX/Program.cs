@@ -8,9 +8,9 @@ namespace Aula_POO_EX
 {
     class Aluno
     {
-        public double Nota1 { get; set; }
-        public double Nota2 { get; set; }
-        public string Nome { get; set; }
+        public double Nota1;
+        public double Nota2;
+        public string Nome;
 
         public double CalcularMedia()
         {
