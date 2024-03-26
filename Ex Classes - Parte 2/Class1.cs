@@ -9,10 +9,10 @@ namespace Ex_Classes___Parte_2
     class Atleta
     {
         // Propriedades da classe Atleta
-        public string Nome { get; set; } // Nome do atleta
-        public int Idade { get; set; } // Idade do atleta
-        public string[] Modalidades { get; set; } // Modalidades do atleta
-        public double Bolsa { get; private set; } // Valor em porcentagem referente à bolsa do atleta
+        public string Nome;
+        public int Idade;
+        public string[] Modalidades;
+        public double Bolsa;
 
         // Método para gravar os dados do atleta
         public void GravarDados(string nome, int idade, string[] modalidades)
