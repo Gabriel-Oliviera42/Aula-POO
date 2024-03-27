@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7FF6EADA-B9D9-4347-AF51-C4CAB11ED832}</ProjectGuid>
+    <ProjectGuid>{11D9D2BE-7510-4570-B239-F04FE03BC83F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex_Classes___Parte_2</RootNamespace>
-    <AssemblyName>Ex Classes - Parte 2</AssemblyName>
+    <RootNamespace>Aula_POO___ex__</RootNamespace>
+    <AssemblyName>Aula POO - ex++</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Atleta.cs" />
+    <Compile Include="Transacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
